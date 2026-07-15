@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="music-player">
+    <h2>Background Player</h2>
+
+    <div id="loading-overlay" class="loading-overlay" aria-live="polite">
+      <img src="Loading.gif" alt="Loading music">
+      <span>Loading track...</span>
+    </div>
+    
+    <div class="controls">
+      <button id="prev-btn" class="player-btn" title="Previous">
+        <img src="prev.png" alt="Previous">
+      </button>
+      
+      <button id="play-btn" class="player-btn" title="Play/Pause">
+        <img id="play-icon" src="play.png" alt="Play">
+      </button>
+      
+      <button id="next-btn" class="player-btn" title="Next">
+        <img src="next.png" alt="Next">
+      </button>
+    </div>
+
+    <p id="song-title">Song: Loading...</p>
+  </div>
+
+  <audio id="bg-audio"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

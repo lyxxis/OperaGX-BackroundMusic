@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "My Custom Music Mod",
+  "version": "1.0.0", 
+  "description": "Custom background tracks for Opera GX",
+  "developer": {
+    "name": "lyxxis"
+  },
+  "icons": {
+    "512": "icon_512.png"
+  },
+  "mod": {
+    "schema_version": 1,
+    "license": "license.txt",
+    "payload": {
+      "background_music": [
+        "music/TrackTwo.mp3"
+      ]
+    }
+  }
+}

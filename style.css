@@ -1,0 +1,114 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 8px;
+}
+
+/* Player Container */
+.music-player {
+  position: relative;
+  background: #1e1e1e;
+  padding: 25px 24px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+}
+
+.music-player h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Control Row */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+/* Image Button Reset */
+.player-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+/* Set button sizes and restrict image sizing */
+.player-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Make play button slightly larger */
+#play-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Interactions */
+.player-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.player-btn:active {
+  transform: scale(0.95);
+}
+
+/* Text display */
+#song-title {
+  font-size: 0.95rem;
+  color: #1db954; /* Spotify-ish green */
+  font-weight: 600;
+  margin: 10px 0 0 0;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.88);
+  border-radius: 15px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.loading-overlay.visible {
+  display: flex;
+  opacity: 1;
+}
+
+.loading-overlay img {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.loading-overlay span {
+  font-size: 0.88rem;
+  color: #d9d9d9;
+  letter-spacing: 0.4px;
+}
